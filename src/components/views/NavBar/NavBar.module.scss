@@ -1,0 +1,23 @@
+@import '../../../styles/settings.scss';
+
+.navBar {
+    background-color: $color-brand;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+    color: $color-text-reverse;
+    align-items: center;
+
+
+    .appName, .navlink {
+        color: $color-text-reverse;
+        padding: 15px;
+        font-weight: 600;
+    }
+
+    .navlink {
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+}
