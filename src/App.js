@@ -7,7 +7,7 @@ import NotFound from './components/pages/NotFound/NotFound';
 function App() {
   return (
     <div className={styles.App}>
-      <p>Hey Mars</p>
+      <p>Hey Venus</p>
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/table/:id" element={<TablePage />} />
