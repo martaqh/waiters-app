@@ -9,6 +9,7 @@ import Container from 'react-bootstrap/esm/Container';
 import { fetchTables } from './redux/tablesRedux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 function App() {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ function App() {
     <main>
       <Container>
         <Header />
-        <Routes>
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/table/:id" element={<TablePage />} />
             <Route path="*" element={<NotFound />} />
