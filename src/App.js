@@ -10,6 +10,7 @@ import { fetchTables } from './redux/tablesRedux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
+
 function App() {
   const dispatch = useDispatch();
   useEffect(() => dispatch(fetchTables()), [dispatch]);
@@ -18,7 +19,7 @@ function App() {
     <main>
       <Container>
         <Header />
-        <Routes>
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/table/:id" element={<TablePage />} />
             <Route path="*" element={<NotFound />} />
