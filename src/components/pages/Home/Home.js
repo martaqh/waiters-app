@@ -6,6 +6,7 @@ import shortid from 'shortid';
 const Home = () => {
     const tables = useSelector(state => state.tables);
     console.log(tables);
+  
     return (
             <Container>
               <h3>All tables</h3>

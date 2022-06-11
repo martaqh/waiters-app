@@ -29,10 +29,30 @@
 }
 
 .tableData {
-    display: flex;
-
-   
-    
+    display: flex;    
     
 }
+
+.button {
+    background-color: $color-brand;
+    border-radius: 5%;
+    margin: 15px;
+    color: $color-text-reverse;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    border: $color-brand;
+    text-align: center;
+
+    :hover {
+         border-color: $color-brand;
+         color: $color-brand;
+    }
+
+    .onClick {
+        background-color: $color-brand;
+        color: $color-text-reverse;
+    }
+}
+
 

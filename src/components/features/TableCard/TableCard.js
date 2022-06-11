@@ -1,5 +1,5 @@
-import Button from '../../common/Button/Button';
 import styles from './TableCard.module.scss'
+import { Link } from 'react-router-dom';
 
 const TableCard = props => {
 
@@ -10,7 +10,7 @@ const TableCard = props => {
                     <p className={styles.tableId}>Table {props.id}</p>
                     <p className={styles.tableStatus}>Status: {props.status}</p>
                 </div>
-                <Button>Show more</Button>
+                <Link to={"/table/" + props.id} onCLick={e => e.preventDefault()}>Show more</Link>
             </div>
         </div>
     
