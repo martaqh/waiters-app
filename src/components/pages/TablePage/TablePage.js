@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import { getTableById } from "../../../redux/tablesRedux";
 
-const TablePage = props => {
+const TablePage = () => {
     const { id } = useParams();
     const table = useSelector(state => getTableById(state, id));
     if (table.status === 'busy')
