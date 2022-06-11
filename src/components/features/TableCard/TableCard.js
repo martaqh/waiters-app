@@ -10,7 +10,7 @@ const TableCard = props => {
                     <p className={styles.tableId}>Table {props.id}</p>
                     <p className={styles.tableStatus}>Status: {props.status}</p>
                 </div>
-                <Link to={"/table/" + props.id} onCLick={e => e.preventDefault()}>Show more</Link>
+                <Link to={"/table/" + props.id}>Show more</Link>
             </div>
         </div>
     
