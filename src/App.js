@@ -9,15 +9,20 @@ import Container from 'react-bootstrap/esm/Container';
 import { fetchTables } from './redux/tablesRedux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => dispatch(fetchTables()), [dispatch]);
 
+  const tables = useSelector(state => state.tables);
+    console.log(tables);
+
   return (
     <main>
       <Container>
         <Header />
+        {tables.map(table => <p>table</p>)}
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/table/:id" element={<TablePage />} />
