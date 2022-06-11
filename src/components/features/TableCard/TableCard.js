@@ -2,6 +2,7 @@ import Button from '../../common/Button/Button';
 import styles from './TableCard.module.scss'
 
 const TableCard = props => {
+
     return (
         <div className={styles.tableCard__wrapper}>
             <div className={styles.tableCard}>

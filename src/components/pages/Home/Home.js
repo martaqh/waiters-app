@@ -12,7 +12,7 @@ const Home = () => {
               <ul>
                 {tables.map(table => <TableCard key={shortid()} {...table} />)}
               </ul> 
-            </Container>    
+            </ Container>
     )
 }
 export default Home;
