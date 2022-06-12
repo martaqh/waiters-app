@@ -12,7 +12,7 @@
     "react": "^18.1.0",
     "react-bootstrap": "2.0.1",
     "react-dom": "^18.1.0",
-    "react-redux": "7.2.6",
+    "react-redux": "^8.0.2",
     "react-router": "^6.3.0",
     "react-router-dom": "6.0.1",
     "react-scripts": "5.0.1",
@@ -21,7 +21,8 @@
     "redux-thunk": "^2.4.1",
     "sass": "1.43.4",
     "shortid": "^2.2.16",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.73.0"
   },
   "scripts": {
     "start": "react-scripts start",
