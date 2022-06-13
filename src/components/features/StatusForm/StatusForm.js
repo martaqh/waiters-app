@@ -15,7 +15,7 @@ const StatusForm = props => {
             <FormSectionTitle>Status:</FormSectionTitle>
             <select className={styles.select + " form-select"}
                     aria-label="Default select example"
-                    defaultValue={props.status}
+                    value={props.status}
                     onChange={props.onChange}>
                 <option selected>{props.status}</option>
                 {statusValues.map(status => <option key={shortid()}>{status}</option> )}

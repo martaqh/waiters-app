@@ -5,7 +5,7 @@ const BillForm = props => {
         <div>
             <FormSectionTitle>Bill:</FormSectionTitle>
             <span>$</span>
-            <input defaultValue={props.bill} onChange={props.onChange}></input>
+            <input value={props.bill} onChange={props.onChange}></input>
         </div>
         
     )

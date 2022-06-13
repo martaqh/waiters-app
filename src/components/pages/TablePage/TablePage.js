@@ -21,18 +21,27 @@ const TablePage = () => {
     const handleSubmit = e => {
         e.preventDefault();
     }
+
+    const handleStatusChange = e => {
+        setStatus(e.target.value);
+        if (e.target.value === 'free' || e.target.value === 'cleaning') {
+            setPeople(0);
+            setBill(0);
+        }
+    }
+
     return ( 
         <main>
             <h2>Table {table.id}</h2>
             <form onSubmit={handleSubmit}>
                 <StatusForm 
                     status={status}
-                    onChange={e => setStatus(e.target.value)} />
+                    onChange={handleStatusChange} />
                 <PeopleNumberForm
-                    people={people}
+                    value={status === 'cleaning' || status === 'free'? 0 : people}
                     places={places}
                     onChangePeople={e => setPeople(e.target.value)}
-                    onChangePlaces={e => setPlaces(e.taget.value)}  />
+                    onChangePlaces={e => setPlaces(e.target.value)}  />
                 {status === 'busy'? <BillForm
                     bill={bill}
                     onChange={e => setBill(e.target.value)} />: null}
