@@ -16,33 +16,30 @@ const TablePage = () => {
     const [places, setPlaces] = useState(table.places);
     const [bill, setBill] = useState(table.bill);
 
-    if (table.status === 'busy')
+    console.log(status, people, places, bill);
+
+    const handleSubmit = e => {
+        e.preventDefault();
+    }
     return ( 
         <main>
             <h2>Table {table.id}</h2>
-            <StatusForm 
-                status={status}
-                onChange={e => setStatus(e.target.value)} />
-            <PeopleNumberForm
-                people={people}
-                places={places}
-                onChangePeople={e => setPeople(e.target.value)}
-                onChangePlaces={e => setPlaces(e.taget.value)}  />
-            <BillForm
-                bill={bill}
-                onChange={e => setBill(e.target.value)} />
-            <Button>Update</Button>
+            <form onSubmit={handleSubmit}>
+                <StatusForm 
+                    status={status}
+                    onChange={e => setStatus(e.target.value)} />
+                <PeopleNumberForm
+                    people={people}
+                    places={places}
+                    onChangePeople={e => setPeople(e.target.value)}
+                    onChangePlaces={e => setPlaces(e.taget.value)}  />
+                {status === 'busy'? <BillForm
+                    bill={bill}
+                    onChange={e => setBill(e.target.value)} />: null}
+                <Button>Update</Button>
+            </form>
         </main>
     )
-    return (
-        <main>
-            <h2>Table {table.id}</h2>
-            <StatusForm status={table.status}>{table.status}</StatusForm> 
-            <PeopleNumberForm people={table.people} places={table.places} />
-            <Button>Update</Button>
-        </main>
-    )
-
 }
 
 export default TablePage;

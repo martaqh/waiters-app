@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import styles from './StatusForm.module.scss';
 import { getAllStatusValues } from "../../../redux/tablesRedux";
 import FormSectionTitle from "../../common/FormSectionTitle/FormSectionTitle";
+import shortid from "shortid";
 
 const StatusForm = props => {
     
@@ -12,9 +13,12 @@ const StatusForm = props => {
     return (
         <div className={styles.statusForm}>
             <FormSectionTitle>Status:</FormSectionTitle>
-            <select className={styles.select + " form-select"} aria-label="Default select example">
+            <select className={styles.select + " form-select"}
+                    aria-label="Default select example"
+                    defaultValue={props.status}
+                    onChange={props.onChange}>
                 <option selected>{props.status}</option>
-                {statusValues.map(status => <option>{status}</option> )}
+                {statusValues.map(status => <option key={shortid()}>{status}</option> )}
             </select>
         </div>
         

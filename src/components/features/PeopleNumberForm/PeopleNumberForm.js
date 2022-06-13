@@ -6,9 +6,9 @@ const PeopleNumberForm = props => {
         <div className={styles.peopleNumberForm}>
             <FormSectionTitle>People:</FormSectionTitle>
             <div className={styles.inputWrapper}>
-                <input type="text" defaultValue={props.people} onChange={props.onChange}></input>
+                <input defaultValue={props.people} onChange={props.onChangePeople}></input>
                 <span>/</span>
-                <input type="text" defaultValue={props.places}></input>
+                <input defaultValue={props.places} onChange={props.onChangePlaces}></input>
             </div>
         </div>       
     )
