@@ -9,6 +9,7 @@ import Container from 'react-bootstrap/esm/Container';
 import { fetchTables } from './redux/tablesRedux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import ServerUpdated from './components/common/ServerUpdated/ServerUpdated';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/table/:id" element={<TablePage />} />
+            <Route path="/server-updated" element={<ServerUpdated />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer/> 
