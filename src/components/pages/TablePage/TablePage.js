@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import { getTableById } from "../../../redux/tablesRedux";
+import StatusForm from "../../features/StatusForm/StatusForm";
 
 const TablePage = () => {
     const { id } = useParams();
@@ -9,7 +10,7 @@ const TablePage = () => {
     return ( 
         <main>
             <h2>Table {table.id}</h2>
-            <p>Status: {table.status} </p>
+            <StatusForm status={table.status}>{table.status}</StatusForm> 
             <p>People: {table.people} / {table.places}</p>
             <p>Bill: {table.bill}</p>
         </main>
@@ -17,7 +18,7 @@ const TablePage = () => {
     return (
         <main>
             <h2>Table {table.id}</h2>
-            <p>Status: {table.status} </p>
+            <StatusForm status={table.status}>{table.status}</StatusForm> 
             <p>People: {table.people} / {table.places}</p>
         </main>
     )
