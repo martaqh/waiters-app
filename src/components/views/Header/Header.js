@@ -1,8 +1,12 @@
-import NavBar from '../NavBar/NavBar'
+import NavBar from '../NavBar/NavBar';
+import styles from'./Header.module.scss';
 
 const Header = () => {
     return (
-        <NavBar></NavBar>
+        <div className={styles.header}>
+            <NavBar />
+        </div>
+        
     )
 }
 

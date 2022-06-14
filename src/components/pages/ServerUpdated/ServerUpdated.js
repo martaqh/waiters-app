@@ -5,11 +5,9 @@ const ServerUpdated = () => {
     return (
         <div className={styles.serverUpdated}>
             <div className={styles.serverUpdated__successMessage}>
-                <h4>The data has been successfully
+                <h4>Table detailes has been
                     <br />
-                    <span>updated</span>
-                    <br />
-                    on server
+                    <span>successfully updated</span>
                 </h4>
             </div>
             
