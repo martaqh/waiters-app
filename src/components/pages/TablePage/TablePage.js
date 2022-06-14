@@ -24,6 +24,38 @@ const TablePage = () => {
         navigate('/server-updated');
     }
 
+    const checkPeopleValue = (peopleNumber) => {
+        
+        if (peopleNumber > 8) {
+            setPeople(8);
+        }
+        if (peopleNumber < 0) {
+            setPeople(0);
+        }
+        if (peopleNumber > places) {
+            setPeople(places);
+            console.log('zmieniam')
+        } else {
+            setPeople(peopleNumber)
+        }
+    }
+
+    const checkPlacesValue = (placesNumber) => {
+        
+        if (placesNumber > 8) {
+            setPlaces(8);
+        }
+        if (placesNumber < 0) {
+            setPlaces(0)
+        }
+        else {
+            setPlaces(placesNumber)
+        }
+        if (placesNumber < people) {
+            setPeople(placesNumber)
+        }
+    }
+
     const handleStatusChange = e => {
         e.preventDefault();
         setStatus(e.target.value);
@@ -43,8 +75,8 @@ const TablePage = () => {
                 <PeopleNumberForm
                     people={status === 'cleaning' || status === 'free'? 0 : people}
                     places={places}
-                    onChangePeople={e => setPeople(e.target.value)}
-                    onChangePlaces={e => setPlaces(e.target.value)}  />
+                    onChangePeople={e => checkPeopleValue(e.target.value)}
+                    onChangePlaces={e => checkPlacesValue(e.target.value)}  />
                 {status === 'busy'? <BillForm
                     bill={bill}
                     onChange={e => setBill(e.target.value)} />: null}
