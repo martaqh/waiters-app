@@ -3,10 +3,19 @@ import TableCard from "../../features/TableCard/TableCard";
 import shortid from 'shortid';
 import styles from './TablesList.module.scss';
 import { getAllTables } from '../../../redux/tablesRedux';
+import Spinner from 'react-bootstrap/esm/Spinner';
 
 const TablesList = props => {
     const tables = useSelector(getAllTables);
     console.log(tables);
+
+    if (tables.length === 0)
+
+    return (
+        <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+        </Spinner>
+        )
     
     return (
         <ul className={styles.tablesList}>
