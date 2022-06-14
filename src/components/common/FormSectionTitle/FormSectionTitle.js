@@ -1,6 +1,10 @@
+import styles from './FormSectionTitle.module.scss';
+
 const FormSectionTitle = props => {
     return (
-        <h6>{props.children}</h6>
+        <div className={styles.formSectionTitle}>
+            <h6 >{props.children}</h6>
+        </div>
     )
 }
 

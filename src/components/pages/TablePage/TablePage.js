@@ -6,6 +6,7 @@ import PeopleNumberForm from "../../features/PeopleNumberForm/PeopleNumberForm";
 import StatusForm from "../../features/StatusForm/StatusForm";
 import BillForm from "../../features/BillForm/BillForm";
 import Button from '../../common/Button/Button';
+import styles from './TablePage.module.scss';
 
 const TablePage = () => {
     const { id } = useParams();
@@ -65,8 +66,8 @@ const TablePage = () => {
 
     return ( 
         <main>
-            <h2>Table {table.id}</h2>
-            <form onSubmit={handleSubmit}>
+            <h2 className={styles.tablePage__title}>Table {table.id}</h2>
+            <form className={styles.tablePage__form} onSubmit={handleSubmit}>
                 <StatusForm 
                     currentStatus={status}
                     onChange={handleStatusChange} />

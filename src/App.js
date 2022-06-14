@@ -9,7 +9,7 @@ import Container from 'react-bootstrap/esm/Container';
 import { fetchTables } from './redux/tablesRedux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import ServerUpdated from './components/common/ServerUpdated/ServerUpdated';
+import ServerUpdated from './components/pages/ServerUpdated/ServerUpdated';
 
 
 function App() {

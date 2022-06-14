@@ -1,0 +1,34 @@
+@import '../../../styles/settings.scss';
+
+.serverUpdated {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.serverUpdated__successMessage {
+    margin-bottom: 30px;
+    padding: 15px;
+
+    h4 {
+        line-height: 40px;
+    }
+    
+    
+    span {
+        color: $color-success;
+        font-size: 30px;
+        text-transform: uppercase;
+        padding: 15px;
+    }
+   
+}
+
+.serverUpdated__linkToTables {
+    margin: 40px;
+    text-decoration: none;
+    color: $color-text-reverse;
+    font-weight: 500;
+    padding: 20px;
+    background-color: $color-brand;
+    border-radius: 5px;
+}

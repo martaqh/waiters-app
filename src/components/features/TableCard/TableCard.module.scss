@@ -2,14 +2,15 @@
 
 .tableCard__wrapper {
     position: relative;
+   
 }
 
 .tableCard {
     display: flex;
     justify-content: space-between;
-   
+    align-items: center;
     padding: 15px 0;
-
+   
     p { 
         padding-right: 15px;
     }
@@ -27,19 +28,39 @@
 }
 
 .tableData {
-    display: flex;      
+    display: flex;
+    align-items: baseline;  
+}
+
+.tableId {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.tableStatus {
+    font-size: 13px; 
+    span {
+        font-weight: 700;
+    }
+}
+
+.linkToDetails {
+    color: $color-text-reverse
 }
 
 .button {
     background-color: $color-brand;
     border-radius: 5%;
-    margin: 15px;
+    margin: 15px 0;
     color: $color-text-reverse;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0.05em;
     border: $color-brand;
     text-align: center;
+    padding: 10px;
+    width: 100px;
+    text-decoration: none;
 
     :hover {
          border-color: $color-brand;
@@ -51,5 +72,4 @@
         color: $color-text-reverse;
     }
 }
-
 
