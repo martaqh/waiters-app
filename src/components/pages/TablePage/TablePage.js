@@ -25,34 +25,32 @@ const TablePage = () => {
     }
 
     const checkPeopleValue = (peopleNumber) => {
-        
-        if (peopleNumber > 8) {
-            setPeople(8);
+        if (peopleNumber > 10) {
+            setPeople(10);
         }
-        if (peopleNumber < 0) {
-            setPeople(0);
-        }
-        if (peopleNumber > places) {
-            setPeople(places);
-            console.log('zmieniam')
+            else if (peopleNumber < 0) {
+                setPeople(0);
+            }
+                else if (peopleNumber > places) {
+                    setPeople(places);
         } else {
-            setPeople(peopleNumber)
+            setPeople(peopleNumber);
         }
     }
 
     const checkPlacesValue = (placesNumber) => {
-        
-        if (placesNumber > 8) {
-            setPlaces(8);
+        if (placesNumber > 10) {
+            setPlaces(10);
         }
-        if (placesNumber < 0) {
-            setPlaces(0)
-        }
+            else if (placesNumber < 0) {
+                setPlaces(0);
+            }
+                else if (placesNumber < people) {
+                    setPlaces(placesNumber);
+                    setPeople(placesNumber);
+                }
         else {
-            setPlaces(placesNumber)
-        }
-        if (placesNumber < people) {
-            setPeople(placesNumber)
+            setPlaces(placesNumber);
         }
     }
 
