@@ -21,7 +21,8 @@ export const fetchTables = () => {
 };
 
 export const updateServerData = (id, status, people, places, bill) => {
-  const options = {
+  return (dispatch) => {
+    const options = {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
@@ -35,9 +36,12 @@ export const updateServerData = (id, status, people, places, bill) => {
       }),
     };
     
-    fetch('http://localhost:3131/tables/' + id, options)
-}
+    fetch('http://localhost:3131/api/tables/' + id, options)
+    .then(() => dispatch(fetchTables()))
+  }
 
+}
+  
 const tablesReducer = (statePart = [], action) => {
   switch (action.type) {
     case UPLOAD_TABLES:

@@ -1,34 +1,39 @@
 {
-    "tables": [
-      { "id": "1",
-        "status": "busy",
-        "people": "1",
-        "places": "2",
-        "bill": "20"
-      },
-      { "id": "2",
-        "status": "free",
-        "people": "0",
-        "places": "4",
-        "bill": "0"
-      },
-      { "id": "3",
-        "status": "reserved",
-        "people": "3",
-        "places": "3",
-        "bill": "0"
-      },
-      { "id": "4",
-        "status": "busy",
-        "people": "4",
-        "places": "4",
-        "bill": "90"
-      },
-      { "id": "5",
-        "status": "cleaning",
-        "people": "0",
-        "places": "4",
-        "bill": "0"
-      }
-    ]
-  }
+  "tables": [
+    {
+      "id": "1",
+      "status": "cleaning",
+      "people": 0,
+      "places": "2",
+      "bill": 0
+    },
+    {
+      "id": "2",
+      "status": "free",
+      "people": "0",
+      "places": "4",
+      "bill": "0"
+    },
+    {
+      "id": "3",
+      "status": "free",
+      "people": 0,
+      "places": "3",
+      "bill": 0
+    },
+    {
+      "id": "4",
+      "status": "free",
+      "people": 0,
+      "places": "4",
+      "bill": 0
+    },
+    {
+      "id": "5",
+      "status": "busy",
+      "people": "2",
+      "places": "4",
+      "bill": "0"
+    }
+  ]
+}

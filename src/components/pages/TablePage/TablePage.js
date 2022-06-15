@@ -29,10 +29,10 @@ const TablePage = () => {
         if (peopleNumber > 10) {
             setPeople(10);
         }
-            else if (peopleNumber < 0) {
+        else if (peopleNumber < 0) {
                 setPeople(0);
-            }
-                else if (peopleNumber > places) {
+        }
+        else if (peopleNumber > places) {
                     setPeople(places);
         } else {
             setPeople(peopleNumber);
@@ -43,12 +43,12 @@ const TablePage = () => {
         if (placesNumber > 10) {
             setPlaces(10);
         }
-            else if (placesNumber < 0) {
-                setPlaces(0);
+        else if (placesNumber < 0) {
+            setPlaces(0);
             }
-                else if (placesNumber < people) {
-                    setPlaces(placesNumber);
-                    setPeople(placesNumber);
+        else if (placesNumber < people) {
+            setPlaces(placesNumber);
+            setPeople(placesNumber);
                 }
         else {
             setPlaces(placesNumber);
