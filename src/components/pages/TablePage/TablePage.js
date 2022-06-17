@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams, useNavigate } from 'react-router-dom';
 import { getTableById, updateServerData } from "../../../redux/tablesRedux";
 import PeopleNumberForm from "../../features/PeopleNumberForm/PeopleNumberForm";
@@ -9,31 +9,42 @@ import Button from '../../common/Button/Button';
 import styles from './TablePage.module.scss';
 
 const TablePage = () => {
+    const dispatch = useDispatch();
     const { id } = useParams();
     const navigate = useNavigate();
 
     const table = useSelector(state => getTableById(state, id));
+    
+    const [status, setStatus] = useState('');
+    const [people, setPeople] = useState(0);
+    const [places, setPlaces] = useState(0);
+    const [bill, setBill] = useState(0);
 
-    const [status, setStatus] = useState(table.status);
-    const [people, setPeople] = useState(table.people);
-    const [places, setPlaces] = useState(table.places);
-    const [bill, setBill] = useState(table.bill);
-    console.log(status, people, places, bill);
+    useEffect(() => {
+        console.log('table', table)
+        if (table) {
+            setStatus(table.status)
+            setPeople(table.people)
+            setPlaces(table.places)
+            setBill(table.bill)
+        }
+    }, [ table ])
 
-    const handleSubmit = e => { 
-        updateServerData(table.id, status, people, places, bill);
-        navigate('/server-updated');
+    const handleSubmit = (e) => { 
+        e.preventDefault();
+        dispatch(updateServerData(table.id, status, people, places, bill))
+        navigate('/server-updated')
     }
 
     const checkPeopleValue = (peopleNumber) => {
-        if (peopleNumber > 10) {
-            setPeople(10);
+        if (peopleNumber > places) {
+            setPeople(places);
         }
         else if (peopleNumber < 0) {
-                setPeople(0);
+            setPeople(0);
         }
-        else if (peopleNumber > places) {
-                    setPeople(places);
+        else if (peopleNumber > 10) {
+            setPeople(10);
         } else {
             setPeople(peopleNumber);
         }
@@ -66,7 +77,7 @@ const TablePage = () => {
 
     return ( 
         <main>
-            <h2 className={styles.tablePage__title}>Table {table.id}</h2>
+            <h2 className={styles.tablePage__title}>Table {table && table.id}</h2>
             <form className={styles.tablePage__form} onSubmit={handleSubmit}>
                 <StatusForm 
                     currentStatus={status}
