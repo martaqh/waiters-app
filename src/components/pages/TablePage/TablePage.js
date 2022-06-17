@@ -16,9 +16,9 @@ const TablePage = () => {
     const table = useSelector(state => getTableById(state, id));
     
     const [status, setStatus] = useState('');
-    const [people, setPeople] = useState(0);
-    const [places, setPlaces] = useState(0);
-    const [bill, setBill] = useState(0);
+    const [people, setPeople] = useState('0');
+    const [places, setPlaces] = useState('0');
+    const [bill, setBill] = useState('0');
 
     useEffect(() => {
         console.log('table', table)
@@ -38,38 +38,37 @@ const TablePage = () => {
         navigate('/server-updated')
     }
 
-    const checkPeopleValue = (input) => {
-        const parsedInput = parseInt(input);
-        
-        console.log(places);
-        if (parsedInput > places) {
+    const checkPeopleValue = (userInput) => {
+        const input = parseInt(userInput);
+        console.log('input:' + input, 'people:' + people, 'places:' + places);
+        if (input > places) {
             setPeople(places);
         }
-        else if (parsedInput < 0) {
+        else if (input < 0) {
             setPeople(0);
         }
-        else if (parsedInput > 10) {
-            setPeople(10);
-        } else {
-            setPeople(parsedInput);
+       // else if (input > 10) {
+        //    setPeople(10);}
+         else {
+            setPeople(input);
         }
     }
 
-    const checkPlacesValue = (input) => {
-        const parsedInput = parseInt(input);
-        
-        if (parsedInput > 10) {
+    const checkPlacesValue = (userInput) => {
+        const input = parseInt(userInput);
+        console.log('input:' + input, 'people:' + people, 'places:' + places);
+        if (input > 10) {
             setPlaces(10);
         }
-        else if (parsedInput < 0) {
+        else if (input < 0) {
             setPlaces(0);
             }
-        else if (parsedInput < people) {
-            setPlaces(parsedInput);
-            setPeople(parsedInput);
+        else if (input < people) {
+            setPlaces(input);
+            setPeople(input);
                 }
         else {
-            setPlaces(parsedInput);
+            setPlaces(input);
         }
     }
 
