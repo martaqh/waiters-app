@@ -9,9 +9,9 @@
     },
     {
       "id": "2",
-      "status": "free",
-      "people": 0,
-      "places": 4,
+      "status": "busy",
+      "people": "10",
+      "places": "6",
       "bill": 0
     },
     {
