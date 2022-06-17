@@ -16,9 +16,9 @@ const TablePage = () => {
     const table = useSelector(state => getTableById(state, id));
     
     const [status, setStatus] = useState('');
-    const [people, setPeople] = useState(0);
-    const [places, setPlaces] = useState(0);
-    const [bill, setBill] = useState(0);
+    const [people, setPeople] = useState('0');
+    const [places, setPlaces] = useState('0');
+    const [bill, setBill] = useState('0');
 
     useEffect(() => {
         console.log('table', table)
