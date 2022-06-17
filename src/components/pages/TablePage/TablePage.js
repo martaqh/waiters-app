@@ -30,39 +30,46 @@ const TablePage = () => {
         }
     }, [ table ])
 
+    
+
     const handleSubmit = (e) => { 
         e.preventDefault();
         dispatch(updateServerData(table.id, status, people, places, bill))
         navigate('/server-updated')
     }
 
-    const checkPeopleValue = (peopleNumber) => {
-        if (peopleNumber > places) {
+    const checkPeopleValue = (input) => {
+        const parsedInput = parseInt(input);
+        
+        console.log(places);
+        if (parsedInput > places) {
             setPeople(places);
         }
-        else if (peopleNumber < 0) {
+        else if (parsedInput < 0) {
             setPeople(0);
         }
-        else if (peopleNumber > 10) {
+        else if (parsedInput > 10) {
             setPeople(10);
         } else {
-            setPeople(peopleNumber);
+            setPeople(parsedInput);
         }
     }
 
-    const checkPlacesValue = (placesNumber) => {
-        if (placesNumber > 10) {
+    const checkPlacesValue = (input) => {
+        const parsedInput = parseInt(input);
+        
+        if (parsedInput > 10) {
             setPlaces(10);
         }
-        else if (placesNumber < 0) {
+        else if (parsedInput < 0) {
             setPlaces(0);
             }
-        else if (placesNumber < people) {
-            setPlaces(placesNumber);
-            setPeople(placesNumber);
+        else if (parsedInput < people) {
+            setPlaces(parsedInput);
+            setPeople(parsedInput);
                 }
         else {
-            setPlaces(placesNumber);
+            setPlaces(parsedInput);
         }
     }
 
