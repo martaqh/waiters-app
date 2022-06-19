@@ -39,8 +39,13 @@ const TablePage = () => {
     }
 
     const checkPeopleValue = (userInput) => {
-        const input = parseInt(userInput);
+        let input = parseInt(userInput);
         console.log('input:' + input, 'people:' + people, 'places:' + places);
+        
+        if (isNaN(input)) {
+            input = 0;
+        }
+        
         if (input > places) {
             setPeople(places);
         }
@@ -55,8 +60,13 @@ const TablePage = () => {
     }
 
     const checkPlacesValue = (userInput) => {
-        const input = parseInt(userInput);
+        let input = parseInt(userInput);
         console.log('input:' + input, 'people:' + people, 'places:' + places);
+        
+        if (isNaN(input)) {
+            input = 0;
+        }
+        
         if (input > 10) {
             setPlaces(10);
         }

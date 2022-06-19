@@ -4,8 +4,8 @@
       "id": "1",
       "status": "busy",
       "people": 6,
-      "places": 7,
-      "bill": 0
+      "places": 6,
+      "bill": "60"
     },
     {
       "id": "2",
@@ -16,9 +16,9 @@
     },
     {
       "id": "3",
-      "status": "free",
-      "people": 0,
-      "places": 3,
+      "status": "busy",
+      "people": 10,
+      "places": 10,
       "bill": 0
     },
     {
