@@ -1,5 +1,5 @@
-import FormSectionTitle from '../../common/FormSectionTitle/FormSectionTitle';
 import styles from './PeopleNumberForm.module.scss';
+import FormSectionTitle from '../../common/FormSectionTitle/FormSectionTitle';
 
 const PeopleNumberForm = props => {
     return (

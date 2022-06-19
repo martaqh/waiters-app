@@ -7,16 +7,13 @@ import Spinner from 'react-bootstrap/esm/Spinner';
 
 const TablesList = props => {
     const tables = useSelector(getAllTables);
-    console.log(tables);
 
     if (tables.length === 0)
-
     return (
         <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
+            <span className="visually-hidden"></span>
         </Spinner>
-        )
-    
+    )
     return (
         <ul className={styles.tablesList}>
             {tables.map(table => <TableCard key={shortid()} {...table} />)}

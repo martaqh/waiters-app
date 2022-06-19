@@ -10,7 +10,6 @@ const ServerUpdated = () => {
                     <span>successfully updated</span>
                 </h4>
             </div>
-            
             <Link className={styles.serverUpdated__linkToTables} to="/">Come back to tables</Link>
         </div>
         

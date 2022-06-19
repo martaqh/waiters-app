@@ -21,7 +21,6 @@ const TablePage = () => {
     const [bill, setBill] = useState('0');
 
     useEffect(() => {
-        console.log('table', table)
         if (table) {
             setStatus(table.status)
             setPeople(table.people)
@@ -29,8 +28,6 @@ const TablePage = () => {
             setBill(table.bill)
         }
     }, [ table ])
-
-    
 
     const handleSubmit = (e) => { 
         e.preventDefault();
@@ -40,12 +37,9 @@ const TablePage = () => {
 
     const checkPeopleValue = (userInput) => {
         let input = parseInt(userInput);
-        console.log('input:' + input, 'people:' + people, 'places:' + places);
-        
         if (isNaN(input)) {
             input = 0;
         }
-        
         if (input > places) {
             setPeople(places);
         }
@@ -61,12 +55,9 @@ const TablePage = () => {
 
     const checkPlacesValue = (userInput) => {
         let input = parseInt(userInput);
-        console.log('input:' + input, 'people:' + people, 'places:' + places);
-        
         if (isNaN(input)) {
             input = 0;
         }
-        
         if (input > 10) {
             setPlaces(10);
         }

@@ -1,5 +1,5 @@
-import FormSectionTitle from "../../common/FormSectionTitle/FormSectionTitle";
 import styles from './BillForm.module.scss';
+import FormSectionTitle from "../../common/FormSectionTitle/FormSectionTitle";
 
 const BillForm = props => {
     return (

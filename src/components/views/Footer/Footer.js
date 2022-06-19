@@ -2,7 +2,9 @@ import styles from './Footer.module.scss';
 
 const Footer = () => {
     return (
-        <h6 className={styles.footer}>Copyright © WaitersApp 2022 </h6>
+        <div className={styles.footer}>
+            <h6 >Copyright © WaitersApp 2022 </h6>
+        </div>  
     )
 }
 

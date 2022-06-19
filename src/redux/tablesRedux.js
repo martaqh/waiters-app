@@ -9,7 +9,6 @@ const UPLOAD_TABLES = createActionName('UPLOAD_TABLES');
 
 // action creators
 export const uploadTables = payload => ({type: UPLOAD_TABLES, payload });
-//export const updateTable = payload => ({type: UPDATE_TABLE, payload });
 
 
 export const fetchTables = () => {
@@ -39,16 +38,12 @@ export const updateServerData = (id, status, people, places, bill) => {
     fetch('http://localhost:3131/api/tables/' + id, options)
     .then(() => dispatch(fetchTables()))
   }
-
 }
   
 const tablesReducer = (statePart = [], action) => {
   switch (action.type) {
     case UPLOAD_TABLES:
       return [...action.payload]
-    
- /*   case UPDATE_TABLE:
-      return [...action.payload] */
     default:
       return statePart;
   };

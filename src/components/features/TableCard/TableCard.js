@@ -10,9 +10,7 @@ const TableCard = props => {
                     <p className={styles.tableId}>Table {props.id}</p>
                     <p className={styles.tableStatus}><span>Status:</span> {props.status}</p>
                 </div>
-                
                     <Link className={styles.button} to={"/table/" + props.id}>Show more</Link>
-                
             </div>
         </div>
     

@@ -10,8 +10,8 @@
     {
       "id": "2",
       "status": "busy",
-      "people": "10",
-      "places": "6",
+      "people": 5,
+      "places": 10,
       "bill": 0
     },
     {
