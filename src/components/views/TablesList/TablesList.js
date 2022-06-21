@@ -6,7 +6,7 @@ import { getAllTables } from '../../../redux/tablesRedux';
 import Spinner from 'react-bootstrap/esm/Spinner';
 
 const TablesList = props => {
-    const tables = useSelector(getAllTables);
+    const tables = useSelector(state => getAllTables(state));
 
     if (tables.length === 0)
     return (

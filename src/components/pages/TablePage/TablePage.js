@@ -46,8 +46,6 @@ const TablePage = () => {
         else if (input < 0) {
             setPeople(0);
         }
-       // else if (input > 10) {
-        //    setPeople(10);}
          else {
             setPeople(input);
         }

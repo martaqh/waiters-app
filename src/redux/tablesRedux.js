@@ -19,6 +19,8 @@ export const fetchTables = () => {
   }
 };
 
+
+
 export const updateServerData = (id, status, people, places, bill) => {
   return (dispatch) => {
     const options = {

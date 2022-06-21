@@ -2,22 +2,22 @@
   "tables": [
     {
       "id": "1",
-      "status": "busy",
-      "people": 6,
+      "status": "cleaning",
+      "people": 0,
       "places": 6,
-      "bill": "60"
+      "bill": 0
     },
     {
       "id": "2",
-      "status": "busy",
-      "people": 5,
+      "status": "cleaning",
+      "people": 0,
       "places": 10,
       "bill": 0
     },
     {
       "id": "3",
-      "status": "busy",
-      "people": 10,
+      "status": "cleaning",
+      "people": 0,
       "places": 10,
       "bill": 0
     },
@@ -30,8 +30,8 @@
     },
     {
       "id": "5",
-      "status": "busy",
-      "people": 2,
+      "status": "cleaning",
+      "people": 0,
       "places": 4,
       "bill": 0
     }
