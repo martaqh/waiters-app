@@ -4,6 +4,7 @@ import shortid from 'shortid';
 import styles from './TablesList.module.scss';
 import { getAllTables } from '../../../redux/tablesRedux';
 import Spinner from 'react-bootstrap/esm/Spinner';
+import AddTable from '../../AddTable/AddTable';
 
 const TablesList = props => {
     const tables = useSelector(state => getAllTables(state));
@@ -15,9 +16,13 @@ const TablesList = props => {
         </Spinner>
     )
     return (
-        <ul className={styles.tablesList}>
-            {tables.map(table => <TableCard key={shortid()} {...table} />)}
-        </ul>
+        <div>
+            <AddTable />
+            <ul className={styles.tablesList}>
+                {tables.map(table => <TableCard key={shortid()} {...table} />)}
+            </ul>
+        </div>
+       
     )
 }
 
