@@ -8,6 +8,7 @@ import AddTable from '../../features/AddTable/AddTable';
 
 const TablesList = props => {
     const tables = useSelector(state => getAllTables(state));
+    console.log(tables);
 
     if (tables.length === 0)
     return (

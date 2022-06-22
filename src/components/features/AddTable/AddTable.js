@@ -10,7 +10,6 @@ const AddTable = () => {
     const getLastTable = ({ tables }) => tables[tables.length-1]
     const lastTable = useSelector(getLastTable);
 
-
     const newTable = {
         id: parseInt(lastTable.id) + 1,
         status: "free",
@@ -22,8 +21,7 @@ const AddTable = () => {
 
     const handleClick = e => {
         e.preventDefault();
-        addTableToServer(newTable.id, newTable.status, newTable.people, newTable.places, newTable.bill);
-        dispatch(addTable(newTable));
+        dispatch(addTableToServer(newTable));
     }
 
     return (

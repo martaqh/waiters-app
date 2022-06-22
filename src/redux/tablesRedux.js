@@ -45,48 +45,40 @@ export const updateServerData = (id, status, people, places, bill) => {
   }
 }
 
-export const addTableToServer = (tableId, status, people, places, bill) => {
-
+export const addTableToServer = (newTable) => {
+  return (dispatch) => {
+    console.log('!', newTable)
     const options = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        id: tableId,
-        status: status,
-        people: people,
-        places: places,
-        bill: bill
+        ...newTable
       }),
     };
     
     fetch(API_URL + '/tables', options)
+    .then(() => dispatch(addTable(newTable)))
   }
+}
 
   export const removeTableFromServer = (tableId) => {
-
+    return (dispatch) =>{
     const options = {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        id: tableId
-      }),
+      method: 'DELETE',  
     };
-    
     fetch(API_URL + '/tables/' + tableId, options)
+    .then(() => dispatch(removeTable(tableId)))
+    }
   }
-
-
   
 const tablesReducer = (statePart = [], action) => {
   switch (action.type) {
     case UPLOAD_TABLES:
       return [...action.payload]
     case ADD_TABLE:
-      return {tables: [...statePart, {...action.payload}]};
+      return [...statePart, {...action.payload}];
     case REMOVE_TABLE:
       return statePart.filter(table => table.id !== action.payload)
     default:
