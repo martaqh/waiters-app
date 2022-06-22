@@ -1,3 +1,5 @@
+import { API_URL } from "../config";
+
 //selectors
 export const getTableById = ({ tables }, tableId) => tables.find(table => table.id === tableId);
 export const getAllTables = state => state.tables;
@@ -16,7 +18,7 @@ export const removeTable = payload => ({type: REMOVE_TABLE, payload });
 
 export const fetchTables = () => {
   return (dispatch) => {
-    fetch('http://localhost:3131/api/tables')
+    fetch(API_URL + '/tables')
     .then(res => res.json())
     .then(tables => dispatch(uploadTables(tables)));
   }
@@ -38,7 +40,7 @@ export const updateServerData = (id, status, people, places, bill) => {
       }),
     };
     
-    fetch('http://localhost:3131/api/tables/' + id, options)
+    fetch(API_URL + '/tables/' + id, options)
     .then(() => dispatch(fetchTables()))
   }
 }
@@ -59,7 +61,7 @@ export const addTableToServer = (tableId, status, people, places, bill) => {
       }),
     };
     
-    fetch('http://localhost:3131/api/tables/', options)
+    fetch(API_URL + '/tables', options)
   }
 
   export const removeTableFromServer = (tableId) => {
@@ -74,7 +76,7 @@ export const addTableToServer = (tableId, status, people, places, bill) => {
       }),
     };
     
-    fetch('http://localhost:3131/api/tables/' + tableId, options)
+    fetch(API_URL + '/tables/' + tableId, options)
   }
 
 

@@ -10,9 +10,13 @@ const TableCard = props => {
                 <div className={styles.tableData}>
                     <p className={styles.tableId}>Table {props.id}</p>
                     <p className={styles.tableStatus}><span>Status:</span> {props.status}</p>
+                    <RemoveTable tableId={props.id} />
                 </div>
-                <RemoveTable tableId={props.id} />
+                    <div className={styles.tableCard__buttons}>
                     <Link className={styles.button} to={"/table/" + props.id}>Show more</Link>
+                    
+                    </div>
+                    
             </div>
         </div>
     

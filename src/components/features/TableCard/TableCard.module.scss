@@ -5,6 +5,11 @@
    
 }
 
+.tableCard__buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
 .tableCard {
     display: flex;
     justify-content: space-between;
