@@ -2,38 +2,38 @@
   "tables": [
     {
       "id": "1",
-      "status": "cleaning",
-      "people": 0,
-      "places": 6,
-      "bill": 0
+      "status": "busy",
+      "people": 5,
+      "places": 5,
+      "bill": "1000000"
     },
     {
       "id": "2",
-      "status": "cleaning",
-      "people": 0,
+      "status": "reserved",
+      "people": 10,
       "places": 10,
       "bill": 0
     },
     {
-      "id": "3",
-      "status": "cleaning",
-      "people": 0,
-      "places": 10,
-      "bill": 0
-    },
-    {
-      "id": "4",
+      "id": 3,
       "status": "free",
-      "people": 0,
-      "places": 4,
-      "bill": 0
+      "people": "0",
+      "places": "0",
+      "bill": "0"
     },
     {
-      "id": "5",
-      "status": "cleaning",
-      "people": 0,
-      "places": 4,
-      "bill": 0
+      "id": 4,
+      "status": "free",
+      "people": "0",
+      "places": "0",
+      "bill": "0"
+    },
+    {
+      "id": 5,
+      "status": "free",
+      "people": "0",
+      "places": "0",
+      "bill": "0"
     }
   ]
 }

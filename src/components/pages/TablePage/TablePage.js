@@ -14,6 +14,7 @@ const TablePage = () => {
     const navigate = useNavigate();
 
     const table = useSelector(state => getTableById(state, id));
+    console.log(table)
     
     const [status, setStatus] = useState('');
     const [people, setPeople] = useState('0');
