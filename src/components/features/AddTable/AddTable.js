@@ -11,7 +11,7 @@ const AddTable = () => {
     const lastTable = useSelector(getLastTable);
 
     const newTable = {
-        id: parseInt(lastTable.id) + 1,
+        id: (parseInt(lastTable.id) + 1).toString(),
         status: "free",
         people: '0',
         places: '0',
