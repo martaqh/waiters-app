@@ -18,7 +18,7 @@ export const removeTable = payload => ({type: REMOVE_TABLE, payload });
 
 export const fetchTables = () => {
   return (dispatch) => {
-    fetch(API_URL + '/tables')
+    fetch(API_URL)
     .then(res => res.json())
     .then(tables => dispatch(uploadTables(tables)));
   }
@@ -40,7 +40,7 @@ export const updateServerData = (id, status, people, places, bill) => {
       }),
     };
     
-    fetch(API_URL + '/tables/' + id, options)
+    fetch(API_URL + id, options)
     .then(() => dispatch(fetchTables()))
   }
 }
@@ -61,7 +61,7 @@ export const addTableToServer = (tableId, status, people, places, bill) => {
       }),
     };
     
-    fetch(API_URL + '/tables', options)
+    fetch(API_URL, options)
   }
 
   export const removeTableFromServer = (tableId) => {
@@ -76,7 +76,7 @@ export const addTableToServer = (tableId, status, people, places, bill) => {
       }),
     };
     
-    fetch(API_URL + '/tables/' + tableId, options)
+    fetch(API_URL + tableId, options)
   }
 
 
