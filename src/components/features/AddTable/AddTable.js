@@ -1,6 +1,6 @@
-
 import { addTable, addTableToServer } from "../../../redux/tablesRedux";
 import { useDispatch, useSelector } from "react-redux";
+import styles from './AddTable.module.scss';
 
 
 
@@ -27,7 +27,7 @@ const AddTable = () => {
     }
 
     return (
-       <button onClick={handleClick}>Add new table</button> 
+       <button className={styles.addTable} onClick={handleClick}>Add new table</button> 
     )
 }
 

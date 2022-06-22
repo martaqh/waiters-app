@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { removeTableFromServer, removeTable } from '../../../redux/tablesRedux';
+import styles from './RemoveTableButton.module.scss'
 
 const RemoveTable = props => {
     const dispatch = useDispatch();   
@@ -15,7 +16,7 @@ const RemoveTable = props => {
     }
 
     return (
-        <button onClick={handleClick}>
+        <button className={styles.removeTable} onClick={handleClick}>
             <FontAwesomeIcon icon={faTrash} />
         </button>
     );

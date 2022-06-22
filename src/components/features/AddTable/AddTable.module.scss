@@ -1,0 +1,25 @@
+@import '../../../styles/settings.scss';
+
+.addTable {
+    background-color: $color-brand;
+    border-radius: 5%;
+    margin: 15px 0;
+    color: $color-text-reverse;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    border: $color-brand;
+    text-align: center;
+    padding: 10px;
+    width: 150px;
+
+    :hover {
+         border-color: $color-brand;
+         color: $color-brand;
+    }
+
+    .onClick {
+        background-color: $color-brand;
+        color: $color-text-reverse;
+    }
+}

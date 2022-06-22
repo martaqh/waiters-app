@@ -1,6 +1,6 @@
 import styles from './TableCard.module.scss';
 import { Link } from 'react-router-dom';
-import RemoveTable from '../RemoveTable/RemoveTable';
+import RemoveTableButton from '../RemoveTableButton/RemoveTableButton';
 
 const TableCard = props => {
 
@@ -10,7 +10,7 @@ const TableCard = props => {
                 <div className={styles.tableData}>
                     <p className={styles.tableId}>Table {props.id}</p>
                     <p className={styles.tableStatus}><span>Status:</span> {props.status}</p>
-                    <RemoveTable tableId={props.id} />
+                    <RemoveTableButton tableId={props.id} />
                 </div>
                     <div className={styles.tableCard__buttons}>
                     <Link className={styles.button} to={"/table/" + props.id}>Show more</Link>
