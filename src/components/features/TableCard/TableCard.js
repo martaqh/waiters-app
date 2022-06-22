@@ -1,6 +1,6 @@
 import styles from './TableCard.module.scss';
 import { Link } from 'react-router-dom';
-import RemoveTable from '../../RemoveTable/RemoveTable';
+import RemoveTable from '../RemoveTable/RemoveTable';
 
 const TableCard = props => {
 

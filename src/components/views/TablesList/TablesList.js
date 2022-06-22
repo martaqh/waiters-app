@@ -4,7 +4,7 @@ import shortid from 'shortid';
 import styles from './TablesList.module.scss';
 import { getAllTables } from '../../../redux/tablesRedux';
 import Spinner from 'react-bootstrap/esm/Spinner';
-import AddTable from '../../AddTable/AddTable';
+import AddTable from '../../features/AddTable/AddTable';
 
 const TablesList = props => {
     const tables = useSelector(state => getAllTables(state));

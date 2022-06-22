@@ -1,5 +1,5 @@
 
-import { addTable, addTableToServer } from "../../redux/tablesRedux";
+import { addTable, addTableToServer } from "../../../redux/tablesRedux";
 import { useDispatch, useSelector } from "react-redux";
 
 
