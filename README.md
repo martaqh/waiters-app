@@ -1,7 +1,13 @@
-An app for waiters that helps to manage information about tables, like table status, number of people at the table or the bill amount.
-Build in React.js as a final project of Kodilla Front-end Bootcamp.
+An app build in React.js as a final project of Kodilla Front-end Bootcamp.
 
-See it here: https://whispering-bastion-97372.herokuapp.com/
+This is a tool for waiters that helps to manage information about tables, like table status, number of people at the table, maximal number of places at a table or the bill amount. Tables-related data are stored on server and are displayed while running the app.
+
+The users may:
+-- add new table
+-- delete existing table
+-- edit info of existing table
+
+You can see and try the app here: https://whispering-bastion-97372.herokuapp.com/
 
 # Getting Started with Create React App
 
